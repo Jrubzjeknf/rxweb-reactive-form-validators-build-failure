@@ -1,27 +1,28 @@
-# Testrxweb
+# Steps to reproduce the build error
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
+1. `npm install`
+2. `ng serve`
 
-## Development server
+# Result
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+Error: ./node_modules/@rxweb/reactive-form-validators/__ivy_ngcc__/fesm2015/rxweb-reactive-form-validators.js
+Module build failed (from ./node_modules/@angular-devkit/build-angular/src/babel/webpack-loader.js):
+TypeError: C:\temp\testrxweb\node_modules\@rxweb\reactive-form-validators\__ivy_ngcc__\fesm2015\rxweb-reactive-form-validators.js: Column must be greater than or equal to 0, got -15
+    at BasicSourceMapConsumer.SourceMapConsumer_findMapping [as _findMapping] (C:\temp\testrxweb\node_modules\@babel\core\node_modules\source-map\lib\source-map-consumer.js:543:13)
+    at BasicSourceMapConsumer.SourceMapConsumer_allGeneratedPositionsFor [as allGeneratedPositionsFor] (C:\temp\testrxweb\node_modules\@babel\core\node_modules\source-map\lib\source-map-consumer.js:201:22)
+    at C:\temp\testrxweb\node_modules\@babel\core\lib\transformation\file\merge-map.js:186:27
+    at Array.forEach (<anonymous>)
+    at BasicSourceMapConsumer.SourceMapConsumer_eachMapping [as eachMapping] (C:\temp\testrxweb\node_modules\@babel\core\node_modules\source-map\lib\source-map-consumer.js:155:14)
+    at buildMappingData (C:\temp\testrxweb\node_modules\@babel\core\lib\transformation\file\merge-map.js:147:12)
+    at mergeSourceMap (C:\temp\testrxweb\node_modules\@babel\core\lib\transformation\file\merge-map.js:21:17)
+    at generateCode (C:\temp\testrxweb\node_modules\@babel\core\lib\transformation\file\generate.js:74:39)
+    at run (C:\temp\testrxweb\node_modules\@babel\core\lib\transformation\index.js:55:33)
+    at run.next (<anonymous>)
+    at Function.transform (C:\temp\testrxweb\node_modules\@babel\core\lib\transform.js:27:41)
+    at transform.next (<anonymous>)
+    at step (C:\temp\testrxweb\node_modules\gensync\index.js:261:32)
+    at C:\temp\testrxweb\node_modules\gensync\index.js:273:13
+    at async.call.result.err.err (C:\temp\testrxweb\node_modules\gensync\index.js:223:11)
+    at C:\temp\testrxweb\node_modules\gensync\index.js:189:28
+```
