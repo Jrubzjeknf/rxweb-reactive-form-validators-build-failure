@@ -1,7 +1,13 @@
-# Steps to reproduce the build error
+# Repo creation steps
+
+1. `ng new`
+1. In `tsconfig.json`, change `"target": "es2015"` to `"target": "es5"`.
+1. `npm i @rxweb/reactive-form-validators -s`
+
+# Steps to reproduce the build error with this repo
 
 1. `npm install`
-2. `ng serve`
+1. `ng serve`
 
 # Result
 
